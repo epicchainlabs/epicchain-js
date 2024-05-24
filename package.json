@@ -1,0 +1,66 @@
+{
+  "name": "@cityofzion/neo-js",
+  "description": "Running NEO blockchain full node with Node.js and MongoDB.",
+  "version": "0.15.0-dev",
+  "license": "MIT",
+  "main": "dist/neo",
+  "types": "dist/neo",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "homepage": "https://github.com/CityOfZion/neo-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfZion/neo-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CityOfZion/neo-js/issues"
+  },
+  "scripts": {
+    "mocha": "mocha",
+    "tsc": "tsc",
+    "tslint": "tslint",
+    "prettier": "prettier",
+    "typedoc": "typedoc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
+    "build:docs": "typedoc --out ./docs --mode modules ./src",
+    "rebuild": "rm -rf ./node_modules && npm install && npm run build",
+    "rebuild:hard": "rm -f ./package-lock.json && npm run rebuild",
+    "lint": "tslint -c tslint.json './src/**/*.ts'",
+    "format": "prettier --write './src/**/*.ts'",
+    "test": "mocha --reporter spec",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch"
+  },
+  "dependencies": {
+    "@cityofzion/neon-js": "^4.3.0",
+    "async": "^2.6.1",
+    "events": "^3.0.0",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.3.15",
+    "node-log-it": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.50",
+    "@types/chance": "^1.0.1",
+    "@types/events": "^1.2.0",
+    "@types/mongodb": "^3.1.17",
+    "@types/mongoose": "^5.3.3",
+    "@types/node": "^10.7.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "prettier": "^1.15.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typedoc": "^0.13.0",
+    "typescript": "^3.1.1"
+  },
+  "keywords": [
+    "neo",
+    "antshares",
+    "blockchain",
+    "cryptocurrency"
+  ]
+}
