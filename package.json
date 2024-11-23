@@ -1,20 +1,20 @@
 {
-  "name": "@cityofzion/neo-js",
-  "description": "Running NEO blockchain full node with Node.js and MongoDB.",
-  "version": "0.15.0-dev",
+  "name": "@epicchain/epicchain-js",
+  "description": "Running EpicChain blockchain full node with Node.js and MongoDB.",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/neo",
   "types": "dist/neo",
   "engines": {
     "node": ">=8.0.0"
   },
-  "homepage": "https://github.com/CityOfZion/neo-js#readme",
+  "homepage": "https://github.com/epicchainlabs/epicchain-js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfZion/neo-js.git"
+    "url": "git+https://github.com/epicchainlabs/epicchain-js.git"
   },
   "bugs": {
-    "url": "https://github.com/CityOfZion/neo-js/issues"
+    "url": "https://github.com/epicchainlabs/epicchain-js/issues"
   },
   "scripts": {
     "mocha": "mocha",
@@ -58,7 +58,7 @@
     "typescript": "^3.1.1"
   },
   "keywords": [
-    "neo",
+    "epicchain",
     "antshares",
     "blockchain",
     "cryptocurrency"
