@@ -1,7 +1,7 @@
 {
   "name": "@epicchain/epicchain-js",
-  "description": "Running EpicChain blockchain full node with Node.js and MongoDB.",
-  "version": "0.1.0",
+  "description": "Setting Up an EpicChain Full Node with Node.js and MongoDB",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/neo",
   "types": "dist/neo",

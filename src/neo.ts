@@ -14,15 +14,15 @@ import C from './common/constants'
 
 const version = require('../package.json').version // tslint:disable-line
 
-const MODULE_NAME = 'Neo'
-const DEFAULT_OPTIONS: NeoOptions = {
+const MODULE_NAME = 'EpicChain'
+const DEFAULT_OPTIONS: EpicChainOptions = {
   network: C.network.testnet,
   enableSyncer: true,
   enableBlockAnalyzer: false,
   loggerOptions: {},
 }
 
-export interface NeoOptions {
+export interface EpicChainOptions {
   network?: string
   storageType?: string
   endpoints?: object[]
@@ -44,10 +44,10 @@ export class Neo extends EventEmitter {
   syncer?: Syncer
   blockAnalyzer?: BlockAnalyzer
 
-  private options: NeoOptions
+  private options: EpicChainOptions
   private logger: Logger
 
-  constructor(options: NeoOptions = {}) {
+  constructor(options: EpicChainOptions = {}) {
     super()
 
     // Associate optional properties
@@ -71,7 +71,7 @@ export class Neo extends EventEmitter {
   }
 
   static get UserAgent(): string {
-    return `NEO-JS:${Neo.VERSION}`
+    return `EpicChain-JS:${Neo.VERSION}`
   }
 
   close() {

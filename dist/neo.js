@@ -42,7 +42,7 @@ class Neo extends events_1.EventEmitter {
         return version;
     }
     static get UserAgent() {
-        return `NEO-JS:${Neo.VERSION}`;
+        return `EpicChain-JS:${Neo.VERSION}`;
     }
     close() {
         this.logger.debug('close triggered.');
