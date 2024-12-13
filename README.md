@@ -1,7 +1,3 @@
-Here’s an expanded version of the README with even more detailed explanations for each section and an enhanced design style:
-
----
-
 <p align="center" style="font-size: 48px; font-weight: bold; color: #333; letter-spacing: 2px;">
   epicchain-js
 </p>

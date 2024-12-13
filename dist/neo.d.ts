@@ -8,7 +8,7 @@ import { Syncer, SyncerOptions } from './core/syncer';
 import { MemoryStorage, MemoryStorageOptions } from './storages/memory-storage';
 import { MongodbStorage, MongodbStorageOptions } from './storages/mongodb-storage';
 import { BlockAnalyzer, BlockAnalyzerOptions } from './analyzers/block-analyzer';
-export interface NeoOptions {
+export interface EpicChainOptions {
     network?: string;
     storageType?: string;
     endpoints?: object[];
@@ -30,7 +30,7 @@ export declare class Neo extends EventEmitter {
     blockAnalyzer?: BlockAnalyzer;
     private options;
     private logger;
-    constructor(options?: NeoOptions);
+    constructor(options?: EpicChainOptions);
     static readonly VERSION: string;
     static readonly UserAgent: string;
     close(): void;

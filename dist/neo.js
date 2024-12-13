@@ -17,7 +17,7 @@ const endpoint_validator_1 = require("./validators/endpoint-validator");
 const profiles_1 = __importDefault(require("./common/profiles"));
 const constants_1 = __importDefault(require("./common/constants"));
 const version = require('../package.json').version;
-const MODULE_NAME = 'Neo';
+const MODULE_NAME = 'EpicChain';
 const DEFAULT_OPTIONS = {
     network: constants_1.default.network.testnet,
     enableSyncer: true,
