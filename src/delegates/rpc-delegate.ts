@@ -1,4 +1,4 @@
-import { rpc } from '@cityofzion/neon-js'
+import { rpc } from '@epicchain/epicvault-js'
 import { RpcValidator } from '../validators/rpc-validator'
 import { AxiosRequestConfig } from 'axios'
 

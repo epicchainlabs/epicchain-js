@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const neon_js_1 = require("@cityofzion/neon-js");
+const neon_js_1 = require("@epicchain/epicvault-js");
 const rpc_validator_1 = require("../validators/rpc-validator");
 class RpcDelegate {
     static query(url, method, params, id, requestConfig) {

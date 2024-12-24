@@ -1,4 +1,4 @@
-export class NeoValidator {
+export class EpicChainValidator {
   static validateHeight(height: number) {
     if (height <= 0) {
       throw new Error(`'height' must be an integer 1 or above.`)

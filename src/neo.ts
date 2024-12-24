@@ -37,7 +37,7 @@ export interface EpicChainOptions {
   loggerOptions?: LoggerOptions
 }
 
-export class Neo extends EventEmitter {
+export class EpicChain extends EventEmitter {
   mesh: Mesh
   storage?: MemoryStorage | MongodbStorage
   api: Api
@@ -56,7 +56,7 @@ export class Neo extends EventEmitter {
 
     // Bootstrapping
     this.logger = new Logger(MODULE_NAME, this.options.loggerOptions)
-    this.logger.info('Version:', Neo.VERSION)
+    this.logger.info('Version:', EpicChain.VERSION)
     this.mesh = this.getMesh()
     this.storage = this.getStorage()
     this.api = this.getApi()
@@ -71,7 +71,7 @@ export class Neo extends EventEmitter {
   }
 
   static get UserAgent(): string {
-    return `EpicChain-JS:${Neo.VERSION}`
+    return `EpicChain-JS:${EpicChain.VERSION}`
   }
 
   close() {
@@ -111,7 +111,7 @@ export class Neo extends EventEmitter {
     } else if (this.options.storageType === C.storage.memory) {
       return new MemoryStorage(this.options.storageOptions)
     } else if (this.options.storageType === C.storage.mongodb) {
-      const mongoStorageOptions = merge({}, this.options.storageOptions, { userAgent: Neo.UserAgent })
+      const mongoStorageOptions = merge({}, this.options.storageOptions, { userAgent: EpicChain.UserAgent })
       return new MongodbStorage(mongoStorageOptions)
     } else {
       throw new Error(`Unknown storageType [${this.options.storageType}]`)

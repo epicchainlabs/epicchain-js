@@ -6,7 +6,7 @@ import { NodeMeta } from './node'
 import { MemoryStorage } from '../storages/memory-storage'
 import { MongodbStorage } from '../storages/mongodb-storage'
 import C from '../common/constants'
-import { NeoValidator } from '../validators/neo-validator'
+import { EpicChainValidator } from '../validators/epicchain-validator'
 
 const MODULE_NAME = 'Api'
 const DEFAULT_OPTIONS: ApiOptions = {
@@ -81,7 +81,7 @@ export class Api extends EventEmitter {
   async getBlock(height: number): Promise<object> {
     this.logger.debug('getBlock triggered. height:', height)
 
-    NeoValidator.validateHeight(height)
+    EpicChainValidator.validateHeight(height)
 
     if (!this.storage) {
       this.logger.debug('No storage delegate detected.')
@@ -110,7 +110,7 @@ export class Api extends EventEmitter {
   async getTransaction(transactionId: string): Promise<object> {
     this.logger.debug('getBlock triggered. transactionId:', transactionId)
 
-    NeoValidator.validateTransactionId(transactionId)
+    EpicChainValidator.validateTransactionId(transactionId)
 
     if (!this.storage) {
       this.logger.debug('No storage delegate detected.')

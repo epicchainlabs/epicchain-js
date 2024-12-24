@@ -132,7 +132,7 @@ export class MongodbStorage extends EventEmitter {
       height,
       source: (options as any).source,
       userAgent: (options as any).userAgent, // Source RPC's user agent
-      createdBy: this.options.userAgent, // neo-js's user agent
+      createdBy: this.options.userAgent, // epicchain-js's user agent
       payload: block,
     }
     await this.blockDao.save(data)
@@ -180,7 +180,7 @@ export class MongodbStorage extends EventEmitter {
     this.logger.debug('setBlockMeta triggered.')
 
     const data = {
-      createdBy: this.options.userAgent, // neo-js's user agent
+      createdBy: this.options.userAgent, // epicchain-js's user agent
       ...blockMeta,
     }
     return await this.blockMetaDao.save(data)
@@ -190,7 +190,7 @@ export class MongodbStorage extends EventEmitter {
     this.logger.debug('setTransactionMeta triggered.')
 
     const data = {
-      createdBy: this.options.userAgent, // neo-js's user agent
+      createdBy: this.options.userAgent, // epicchain-js's user agent
       ...transactionMeta,
     }
     return await this.transactionMetaDao.save(data)

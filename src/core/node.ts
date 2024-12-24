@@ -3,7 +3,7 @@ import { Logger, LoggerOptions } from 'node-log-it'
 import { merge, filter, remove, meanBy, round } from 'lodash'
 import { RpcDelegate } from '../delegates/rpc-delegate'
 import C from '../common/constants'
-import { NeoValidator } from '../validators/neo-validator'
+import { EpicChainValidator } from '../validators/epicchain-validator'
 import { AxiosRequestConfig } from 'axios'
 
 const MODULE_NAME = 'Node'
@@ -75,7 +75,7 @@ export class Node extends EventEmitter {
   async getBlock(height: number, isVerbose: boolean = true): Promise<object> {
     this.logger.debug('getBlock triggered.')
 
-    NeoValidator.validateHeight(height)
+    EpicChainValidator.validateHeight(height)
 
     const verboseKey: number = isVerbose ? 1 : 0
     return await this.query(C.rpc.getblock, [height, verboseKey])
